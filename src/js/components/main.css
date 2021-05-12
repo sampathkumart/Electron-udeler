@@ -1,0 +1,13 @@
+.card-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card-body {
+  max-width: 250px;
+}
+
+.media {
+  height: 150px;
+}
