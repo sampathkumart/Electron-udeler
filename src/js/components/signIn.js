@@ -111,15 +111,6 @@ export default function SignIn() {
                   Sign In
                 </Button>
               </Link>
-              <Button
-                type="submit"
-                fullWidth
-                variant="contained"
-                color="primary"
-                className={classes.submit}
-              >
-                Sign In
-              </Button>
             </TabPanel>
           </Tabs>
         </form>

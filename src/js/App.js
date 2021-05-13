@@ -7,10 +7,10 @@ export default function App() {
   return (
     <>
       <HashRouter>
-        <div>
+        <>
           <Route path="/" exact component={SignIn} />
           <Route path="/dashBoard" component={Dashboard} />
-        </div>
+        </>
       </HashRouter>
     </>
   );
