@@ -1,11 +1,13 @@
-var url = require('url');
-var path = require('path');
 var Downloader = require('mt-files-downloader');
-var target_url =
-  'https://mp4-a.udemycdn.com/2020-09-18_15-11-07-c3a4c1511d139b0f9ecb7ccdb1f73ba5/1/WebHD_720p.mp4?_JM-0slFGYy9XmBi0e6_mH2lHISNvRNRjwA908FBGt0xBpAw-ihH2PxiFxnZ-N_ChyFGSEuZEWzYoKArAab5E4ThYAL1L8WS6EPUVfZhZgrbKPY3tuP-TNfSprolUE52ZtrBiO3T4j5dVT3sSbMQ5okytiRB6NoRGPnb4aiIPJWYaZi3';
+const homedir = require('os').homedir();
 
 var downloader = new Downloader();
-dl = downloader.download(target_url, 'demo.mp4');
+
+// export default function download(url, name) {
+dl = downloader.download(
+  'https://mp4-a.udemycdn.com/2019-07-11_20-48-34-8cfea8626652141b0fc703966dba716d/WebHD_480.mp4?NaFbPi1WpcOcoOuBueV2XzzpoNKFRuC1N-BM1O4pilo_868T7j3Rw23iIoc7kCZwP6AqFqxlJS5vEJhDBMSE02sKFUORr-zJGLqSfzhDbOGMQzlNZjhVMBmtOv1uvoDzFHlhMLQ2nFGU1_GSytwNKwaRQxm0LAZLiq1COSyZh7gP',
+  homedir + '/Downloads/' + '1.mp4'
+);
 
 dl.start();
 dl.on('error', function (dl) {
@@ -19,3 +21,4 @@ dl.on('start', function () {
 dl.on('end', function () {
   console.log('end');
 });
+// }
